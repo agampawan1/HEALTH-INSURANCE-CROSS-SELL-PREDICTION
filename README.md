@@ -17,3 +17,27 @@ Successfully implementing this predictive model will offer significant advantage
 
 Moreover, the predictive model will empower the insurance company to stay ahead in a competitive market landscape. Informed decision-making, driven by data insights, will foster a customer-centric approach, establishing deeper connections with customers and driving long-term business success. The predictive model's implications will transcend mere revenue optimization, allowing the company to uphold its commitment to providing exemplary insurance services while meeting evolving customer expectations.
 
+# Approach:
+# 1.Data Cleaning and Preprocessing:
+
+The first step involved thorough data cleaning to identify and handle any missing values or duplicates. As the dataset was free of such issues, data normalization was performed to bring numerical features to a consistent scale, ensuring fair comparisons during analysis.
+
+# 2.Exploratory Data Analysis (EDA):
+
+EDA was carried out to gain insights into the data distribution, correlations, and trends. Age was categorized into different groups to better understand customer demographics. Additionally, features like Region_Code and Policy_Sales_Channel were analyzed to extract meaningful information.
+
+# 3.Feature Selection:
+
+To identify the most influential features, both numerical and categorical, feature selection techniques like Kendall's rank correlation coefficient and Mutual Information were employed. These techniques helped us identify the key variables that impact customer interest in vehicle insurance
+
+# 4.Model Prediction:
+
+The project utilized various supervised machine learning algorithms to build predictive models. Decision Tree Classifier, AdaBoost, LightGBM, Bagging Regressor, Naive Bayes, and Logistic Regression were among the models evaluated. Hyperparameter tuning was applied to improve the accuracy of the models and mitigate overfitting.
+
+# Conclusion:
+
+Starting from loading our dataset, we initially checked for null values and duplicates. There were no null values and duplicates so treatment of such was not required. Through Exploratory Data Analysis,we observed that customers belonging to youngAge are more interested in vehicle response.while Young people below 30 are not interested in vehicle insurance. We observed that customers having vehicles older than 2 years are more likely to be interested in vehicle insurance. Similarly, customers having damaged vehicles are more likely to be interested in vehicle insurance. The variable such as Age, Previously_insured,Annual_premium are more afecting the target variable. For Feature Selection, we applied the Mutual Information technique. Here we observed that Previously_Insured is the most important feature and has the highest impact on the dependent feature and there is no correlation between the two. We observed that the target variable was highly imbalanced.So this issue was solved by using Random Over Sample resampling technique. we applied feature scaling techniques to normalize our data to bring all features on the same scale and make it easier to process by ML algorithms. Further, we applied Machine Learning Algorithms to determine whether a customer would be interested in Vehicle Insurance.
+For our predictive modeling, we evaluated multiple algorithms, such as Logistic Regression, RandomForest, XGBClassifier, and KNeighbors.
+The Random Forest model demonstrated an impressive accuracy of 91%, signifying its ability to accurately classify customers interested in vehicle insurance. Additionally, it achieved a remarkable recall of 98%, indicating its proficiency in identifying true positive instances, a crucial aspect in correctly identifying potential customers. The model's precision of 86% underscores its capability to minimize false positive classifications, ensuring targeted and relevant communication strategies. Moreover, the F1 score of 92%, representing a harmonious balance between precision and recall, highlights the model's overall efficacy in handling imbalanced classes.Moreover, the model achieved an outstanding ROC-AUC score of 92%, a vital metric that measures the model's ability to discriminate between positive and negative instances. This high score signifies the model's strong capability in distinguishing interested customers from non-interested ones.
+
+In light of these outcomes, we confidently conclude that the RandomForest model is the most suitable choice for this classification task. Its high accuracy and robust ROC_AUC score indicate its efficacy in identifying potential customers interested in vehicle insurance among existing health insurance policyholders. As the insurance company endeavors to optimize its communication strategies and revenue generation, the RandomForest model will be instrumental in driving more personalized marketing efforts, enhancing customer satisfaction, and ensuring continued business success. By leveraging data insights and advanced machine learning techniques, the insurance company is poised to stay ahead in the competitive market landscape, cementing its position as a customer-centric and reliable insurance provider.
